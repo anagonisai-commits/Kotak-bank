@@ -13,3 +13,17 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
     // later this will go to dashboard.html
     // window.location.href = 'dashboard.html';
 });
+document.getElementById('loginForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const id = document.getElementById('loginId').value.trim();
+    const pwd = document.getElementById('password').value.trim();
+
+    if (!id || !pwd) {
+        alert('Please enter Login ID and MPIN');
+        return;
+    }
+
+    // redirect to dashboard
+    window.location.href = 'dashboard.html';
+});
